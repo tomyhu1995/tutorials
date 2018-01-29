@@ -46,11 +46,4 @@ control MyDeparser(packet_out packet, in headers hdr) {
     apply { /* TODO: add deparser logic */ }
 }
 
-V1Switch(
-MyParser(),
-MyVerifyChecksum(),
-MyIngress(),
-MyEgress(),
-MyComputeChecksum(),
-MyDeparser()
-) main;
+V1Switch(MyParser(), MyVerifyChecksum(), MyIngress(), MyEgress(), MyComputeChecksum(), MyDeparser()) main;
